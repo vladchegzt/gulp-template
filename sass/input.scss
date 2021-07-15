@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+$dark: #162061;
+$orange: #ff7c00;
+
+html .ru {
+  display: none;
+}
+
+html .en {
+  display: none;
+}
+
+html.ru .ru {
+  display: block;
+}
+
+html.en .en {
+  display: block;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: $orange;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+
+html {
+  font-size: 10px;
+  background: #000;
+}
+
+body {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  line-height: 1.25;
+  font-weight: 400;
+  color: #fff;
+  background: #000;
+}
+
+.container {
+  position: relative;
+  z-index: 3;
+  max-width: 95%;
+  margin: 0 auto;
+  padding: 0 10px;
+  width: 160em;
+}
+
+.main-wrapper {
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.lang-box {
+  border: 1px solid #7c82a6;
+  width: 12.8rem;
+  height: 4.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 22px;
+  position: absolute;
+  top: 10rem;
+  right: 0;
+  a {
+    font-size: 1.6rem;
+    color: #36c3df;
+    text-transform: uppercase;
+    margin: 0 .9rem;
+    text-decoration: none;
+    transition: all .3s;
+    &:hover, &.active {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}
+
+
+.main-btn {
+  padding: 2.5rem 4rem;
+  min-width: 44rem;
+  max-width: 100%;
+  cursor: pointer;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 4.4rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  background: $orange;
+  margin-bottom: 2rem;
+  transition: .2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $orange;
+  &:hover {
+    background: #f99451;
+  }
+  svg {
+    width: 4rem;
+    height: auto;
+  }
+  &.white-bg {
+    background: #fff;
+    color: $orange;
+    border-color: #fff;
+    &:hover {
+      background: #f99451;
+      color: #ffffff;
+    }
+  }
+  &.disabled {
+    background: #341900 !important;
+    color: #fff !important;
+    cursor: default;
+    pointer-events: none;
+    font-size: 3rem;
+    font-weight: normal;
+    .main-btn-txt {
+      margin-right: 2.8rem;
+    }
+  }
+}
+
+.header-main {
+  padding: 2.2rem 0;
+}
+
+
+
+
+
+/*************************************** MEDIA ***************************************/
+
+@media (min-height: 1200px) and (min-width: 1920px) {
+  html {
+    font-size: 11px;
+  }
+}
+
+@media (min-height: 1400px) and (min-width: 2400px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 1680px) {
+  html {
+    font-size: 9px;
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  html {
+    font-size: 8px;
+  }
+}
+
+@media only screen and (max-width: 1366px) {
+  html {
+    font-size: 7px;
+  }
+
+}
+
+@media only screen and (max-width: 1024px) {
+  html {
+    font-size: 6px;
+  }
+  .bonus-txt {
+    margin-bottom: 70rem;
+  }
+}
+
+/* ----------- iPad Pro 12.9" ----------- */
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  html {
+    font-size: 9px;
+  }
+}
+
+/* ----------- iPad 3, 4 and Pro 9.7" ----------- */
+/* Portrait */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+
+  html {
+    font-size: 7px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+
+}
+
+@media only screen and (max-width: 768px)  {
+  html {
+    font-size: 6px;
+  }
+
+}
+
+@media only screen and (max-width: 640px) {
+
+}
+
+@media only screen and (max-width: 576px)  {
+  html {
+    font-size: 5px;
+  }
+}
+
+@media only screen and (max-width: 480px)  {
+  html {
+    font-size: 5px;
+  }
+
+}
+
+@media only screen and (max-width: 414px)  {
+  html {
+    font-size: 4.5px;
+  }
+
+}
+
+@media only screen and (max-width: 375px)  {
+  .hero-title {
+    font-size: 10rem;
+  }
+  .logo-item {
+    width: 8.6em;
+    &:nth-child(2) {
+      width: 5em;
+    }
+    &:nth-child(3) {
+      width: 8em;
+    }
+  }
+}
+
+@media only screen and (max-width: 320px)  {
+  html {
+    font-size: 4px;
+  }
+}
+
+/*************************************** LANDSCAPE ****************************************/
+
+/* ----------- iPad Pro 12.9" ----------- */
+@media only screen and (min-device-width: 1366px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  html {
+    font-size: 9px;
+  }
+}
+
+/* iPad landscape */
+@media only screen and (max-width: 1024px) and (max-height: 768px) and (orientation: landscape) {
+
+}
+
+@media only screen and (max-width: 850px) and (orientation: landscape) {
+  html {
+    font-size: 5px;
+  }
+
+}
+
+@media only screen and (max-width: 750px) and (orientation: landscape) {
+  html {
+    font-size: 4px;
+  }
+}
+
+@media only screen and (max-width: 568px) and (orientation: landscape) {
+  html {
+    font-size: 3.5px;
+  }
+}
